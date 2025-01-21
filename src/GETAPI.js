@@ -6,7 +6,7 @@ const GETAPI = () => {
   const GetProductDataUsingFetch = async () => {
     try {
       const data = await fetch("https://dummyjson.com/products");
-      const updatedData = await data.json();
+      const updatedData = await  data.json();
       console.log("fetch data", updatedData);
     } catch (error) {
       console.log(error);
@@ -17,7 +17,7 @@ const GETAPI = () => {
     try {
       const data = await fetch("https://dummyjson.com/products/1");
       const updatedData = await data.json();
-      console.log("Data 1", updatedData);
+      // console.log("Data 1", updatedData);
     } catch (error) {
       console.log(error);
     }
@@ -26,7 +26,7 @@ const GETAPI = () => {
   const GetProductDataUsingAxios = async () => {
     try {
       const data = await axios.get("https://dummyjson.com/products");
-      console.log("Axios fetch data", data?.data);
+      // console.log("Axios fetch data", data?.data);
     } catch (error) {
       console.log(error);
     }
@@ -35,7 +35,7 @@ const GETAPI = () => {
   const getSingleProductUsingAxios = async () => {
     try {
       const data = await axios.get("https://dummyjson.com/products/1");
-      console.log("Single product data", data?.data);
+      // console.log("Single product data", data?.data);
     } catch (error) {
       console.log(error);
     }
